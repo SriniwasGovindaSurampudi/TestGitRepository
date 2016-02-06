@@ -1,0 +1,183 @@
+Last login: Sat Feb  6 16:30:49 on console
+sriniwass-MacBook-Air:~ govinda$ pwd
+/Users/govinda
+sriniwass-MacBook-Air:~ govinda$ cd Desktop/
+sriniwass-MacBook-Air:Desktop govinda$ git clone https://github.com/SriniwasGovindaSurampudi/TestGitRepository.git
+Cloning into 'TestGitRepository'...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+Checking connectivity... done.
+sriniwass-MacBook-Air:Desktop govinda$ pwd
+/Users/govinda/Desktop
+sriniwass-MacBook-Air:Desktop govinda$ ls
+IIIT_H
+Probabilistic Systems Analysis and Applied Probability.zip
+TestGitRepository
+how does the mind work_14_Nov_2015.tiff
+latex
+my_opencv2
+opencv-3.1.0
+t.py
+trial.py
+winter2015-master
+sriniwass-MacBook-Air:Desktop govinda$ cd TestGitRepository/
+sriniwass-MacBook-Air:TestGitRepository govinda$ ls
+README.md
+sriniwass-MacBook-Air:TestGitRepository govinda$ pwd
+/Users/govinda/Desktop/TestGitRepository
+sriniwass-MacBook-Air:TestGitRepository govinda$ ls
+README.md	hk.txt
+sriniwass-MacBook-Air:TestGitRepository govinda$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	hk.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+sriniwass-MacBook-Air:TestGitRepository govinda$ git add hk.txt
+sriniwass-MacBook-Air:TestGitRepository govinda$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   hk.txt
+
+sriniwass-MacBook-Air:TestGitRepository govinda$ git commit -m "adding a text file"
+[master 28bd515] adding a text file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hk.txt
+sriniwass-MacBook-Air:TestGitRepository govinda$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working directory clean
+sriniwass-MacBook-Air:TestGitRepository govinda$ git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+In Git 2.0, Git will default to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 306 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/SriniwasGovindaSurampudi/TestGitRepository.git
+   d19e978..28bd515  master -> master
+sriniwass-MacBook-Air:TestGitRepository govinda$ pwd
+/Users/govinda/Desktop/TestGitRepository
+sriniwass-MacBook-Air:TestGitRepository govinda$ git pull
+Already up-to-date.
+sriniwass-MacBook-Air:TestGitRepository govinda$ git
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+The most commonly used git commands are:
+   add        Add file contents to the index
+   bisect     Find by binary search the change that introduced a bug
+   branch     List, create, or delete branches
+   checkout   Checkout a branch or paths to the working tree
+   clone      Clone a repository into a new directory
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   fetch      Download objects and refs from another repository
+   grep       Print lines matching a pattern
+   init       Create an empty Git repository or reinitialize an existing one
+   log        Show commit logs
+   merge      Join two or more development histories together
+   mv         Move or rename a file, a directory, or a symlink
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+   rebase     Forward-port local commits to the updated upstream head
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+   show       Show various types of objects
+   status     Show the working tree status
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+'git help -a' and 'git help -g' lists available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+sriniwass-MacBook-Air:TestGitRepository govinda$ git help -a
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+available git commands in '/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core'
+
+  add                       diff                      merge-index               request-pull
+  add--interactive          diff-files                merge-octopus             rerere
+  am                        diff-index                merge-one-file            reset
+  annotate                  diff-tree                 merge-ours                rev-list
+  apply                     difftool                  merge-recursive           rev-parse
+  archimport                difftool--helper          merge-resolve             revert
+  archive                   fast-export               merge-subtree             rm
+  bisect                    fast-import               merge-tree                send-email
+  bisect--helper            fetch                     mergetool                 send-pack
+  blame                     fetch-pack                mktag                     sh-i18n--envsubst
+  branch                    filter-branch             mktree                    shell
+  bundle                    fmt-merge-msg             mv                        shortlog
+  cat-file                  for-each-ref              name-rev                  show
+  check-attr                format-patch              notes                     show-branch
+  check-ignore              fsck                      p4                        show-index
+  check-mailmap             fsck-objects              pack-objects              show-ref
+  check-ref-format          gc                        pack-redundant            stage
+  checkout                  get-tar-commit-id         pack-refs                 stash
+  checkout-index            grep                      patch-id                  status
+  cherry                    gui--askpass              prune                     stripspace
+  cherry-pick               hash-object               prune-packed              submodule
+  citool                    help                      pull                      subtree
+  clean                     http-backend              push                      svn
+  clone                     http-fetch                quiltimport               symbolic-ref
+  column                    http-push                 read-tree                 tag
+  commit                    imap-send                 rebase                    unpack-file
+  commit-tree               index-pack                receive-pack              unpack-objects
+  config                    init                      reflog                    update-index
+  count-objects             init-db                   relink                    update-ref
+  credential                instaweb                  remote                    update-server-info
+  credential-cache          log                       remote-ext                upload-archive
+  credential-cache--daemon  ls-files                  remote-fd                 upload-pack
+  credential-osxkeychain    ls-remote                 remote-ftp                var
+  credential-store          ls-tree                   remote-ftps               verify-pack
+  cvsexportcommit           mailinfo                  remote-http               verify-tag
+  cvsimport                 mailsplit                 remote-https              web--browse
+  cvsserver                 merge                     remote-testsvn            whatchanged
+  daemon                    merge-base                repack                    write-tree
+  describe                  merge-file                replace
+
+git commands available from elsewhere on your $PATH
+
+  lfs
+
+'git help -a' and 'git help -g' lists available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+sriniwass-MacBook-Air:TestGitRepository govinda$ 
